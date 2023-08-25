@@ -25,7 +25,7 @@ streamlit.dataframe(fruits_to_show)
 
 
 #don't run anything past here while we troubleshoot.
-streamlit.stop()
+#streamlit.stop()
 
 #New Section to display api responses
 streamlit.header("Fruityvice Fruit Advice!")
@@ -35,9 +35,7 @@ try:
       Streamlit.error("Please select a fruit to get information.")
   else:
       fruityvice_response = requests.get("https://Fruityvice.com/api/fruit/" + fruit_choice)
-      # normalise the data call.. 
-      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-      # Add the normalized code to the table for display.
+       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       streamlit.dataframe(fruityvice_normalized)
 except URLError as e:
   Streamlit.error()
