@@ -23,6 +23,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
+
+#don't run anything past here while we troubleshoot.
+streamlit.stop()
+
 #New Section to display api responses
 streamlit.header("Fruityvice Fruit Advice!")
 try:
@@ -43,7 +47,6 @@ streamlit.write('The user entered ', fruit_choice)
 
 
 #don't run anything past here while we troubleshoot.
-
 streamlit.stop()
 
 
