@@ -25,7 +25,6 @@ streamlit.dataframe(fruits_to_show)
 
 
 #don't run anything past here while we troubleshoot.
-#streamlit.stop()
 
 #New Section to display api responses
 streamlit.header("Fruityvice Fruit Advice!")
