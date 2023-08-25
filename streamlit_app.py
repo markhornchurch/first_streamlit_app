@@ -29,7 +29,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
-#don't run anything past here while we troubleshoot.
 #create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_chioice):
       fruityvice_response = requests.get("https://Fruityvice.com/api/fruit/" + fruit_choice)
@@ -63,6 +62,9 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list cotains:")
 streamlit.dataframe(my_data_rows)
+
+
+#streamlit.stop()
 
 after
 #----------------
