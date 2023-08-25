@@ -66,7 +66,7 @@ streamlit.dataframe(my_data_rows)
 
 #streamlit.stop()
 
-after
+#after
 #----------------
 streamlit.header("The fruit load list cotains:")
 #snowflake related functions
