@@ -35,6 +35,8 @@ try:
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       # Add the normalized code to the table for display.
       streamlit.dataframe(fruityvice_normalized)
+except URLError as e:
+  Streamlit.error()
 
     
 streamlit.write('The user entered ', fruit_choice)
